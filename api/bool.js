@@ -5,7 +5,7 @@ const app = express();
 // Create the Express route
 app.get("/api/bool", (req, res) => {
   const result = Math.random() >= 0.5; // Random true/false
-  res.json({ result: result });
+  res.json({ result: result, res: result });
 });
 
 // Export the app as a Vercel-compatible function
