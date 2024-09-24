@@ -11,6 +11,9 @@ app.get("/api/bool", (req, res) => {
   const result = res >= 0.5; // Random true/false
   res.json({ result: result });
 });
+module.exports = (req, res) => {
+  res.status(200).json({ message: "Hello World" });
+};
 
 // Export the app as a Vercel-compatible function
 module.exports = app;
