@@ -1,6 +1,9 @@
 // api/bool.js
 const express = require("express");
+const cors = require("cors");
+
 const app = express();
+app.use(cors());
 
 // Create the Express route
 app.get("/api/bool", (req, res) => {
