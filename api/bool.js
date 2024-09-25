@@ -8,8 +8,9 @@ app.use(cors());
 // Create the Express route
 app.get("/api/bool", cors(), (req, res) => {
   const rnd = Math.random();
+  const whiteList = ["md-blocks"];
   const result = rnd >= 0.5; // Random true/false
-  res.json({ result: result, inp: req });
+  res.json({ result: result });
 });
 
 // Export the app as a Vercel-compatible function
