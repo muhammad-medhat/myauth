@@ -9,7 +9,7 @@ app.use(cors());
 app.get("/api/bool", cors(), (req, res) => {
   const rnd = Math.random();
   const result = rnd >= 0.5; // Random true/false
-  res.json({ result: result });
+  res.json({ result: result, rnd, res });
 });
 
 // Export the app as a Vercel-compatible function
