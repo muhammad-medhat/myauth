@@ -9,8 +9,8 @@ app.use(cors());
 app.get("/api/bool", cors(), (req, res) => {
   const token = req.query.token;
   const whiteList = ["md-blocks"];
-  const result = whiteList.includes(token);
-  result = true;
+  // const result = whiteList.includes(token);
+  const result = true;
   res.json({ result: result });
 });
 
