@@ -7,12 +7,10 @@ app.use(cors());
 
 // Create the Express route
 app.get("/api/bool", cors(), (req, res) => {
-  const rnd = Math.random();
   const token = req.query.token;
-
   const whiteList = ["md-blocks"];
-  // const result = rnd >= 0.5; // Random true/false
-  const result = whiteList.includes(token); // Random true/false
+  const result = whiteList.includes(token);
+  result = true;
   res.json({ result: result });
 });
 
